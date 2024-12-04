@@ -11,11 +11,13 @@ db = SQLAlchemy(app)
 
 app.app_context().push()
 
-
+from project.user.routes import user
 from project.post.routes import post 
 from project.tree.routes import tree
 
-app.register_blueprint(post)
+
+app.register_blueprint(user, url_prefix='/user')
+app.register_blueprint(post, url_prefix'/post')
 app.register_blueprint(tree, url_prefix='/tree')
 
 

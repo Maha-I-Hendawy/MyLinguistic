@@ -27,9 +27,9 @@ lemma = WordNetLemmatizer()
 # Get All Posts
 
 @post.route('/')
-def home():
+def post():
 	posts = Post.query.all()
-	return render_template("home.html", posts=posts)
+	return render_template("post.html", posts=posts)
 
 
 
