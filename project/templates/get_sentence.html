@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+	<ul style="list-style-type:none;">
+	  	 <h3>Words</h3>
+	     {% for w in words %}
+	        <div style="padding: 20px;">
+	         <li class="words">{{ w }}</li>
+	           <form>
+		         <input type="checkbox" name="DT">Determiner
+		         <input type="checkbox" name="N">Noun
+		         <input type="checkbox" name="V">Verb
+		         <input type="checkbox" name="ADJ">Adjective
+		         <input type="checkbox" name="ADV">Adverb
+		         <input type="checkbox" name="PRP">Preposition
+		         <input type="checkbox" name="CONJ">Conjunction
+		         <input type="checkbox" name="UH">Interjection
+		       </form>
+		    </div>
+	         
+	     {% endfor %}
+       </ul>
+       
+        
+	          
+{% endblock %}

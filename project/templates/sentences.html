@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<form action="" method="post">
+		<label>Sentence:</label>
+		<input type="text" name="text" placeholder="Enter A Sentence">
+		<br>
+		<input type="submit" value="Add">
+	</form>
+	<ul>
+		{% for x in sentences %}
+		  <li>{{ x.sentence }}</li>
+		  <a href="{{ url_for('tree.get_sentence', sentence_id=x.id) }}">Words</a>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
+
+

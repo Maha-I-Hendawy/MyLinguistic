@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+   <form action="" method="post" enctype="multipart/form-data">
+		<label>Title:</label>
+		<input type="text" name="title" value="{{ post.title }}">
+		<br>
+		<label>Content:</label>
+		<textarea name="content">{{ post.content }}</textarea>
+		<br>
+		<label>Image:</label>
+		<input type="file" name="upload">
+		<input type="submit" value="Update">
+		
+	</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+
+
+ul {
+	float: right;
+}
+
+
+.btn {
+
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid blue;
+	border-radius: 3px;
+	background-color: blue;
+	color: white;
+	text-decoration: none;
+}
+
+.words {
+	display: inline;
+	padding: 20px;
+	margin: 20px;
+}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+	<ul style="list-style-type:none;">
+		
+	     {% for s in sents %}
+	        
+	           <li>{{ s }}</li>
+	          
+	     {% endfor %}
+    </ul>
+
+
+
+{% endblock %}

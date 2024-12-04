@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+		<ul style="list-style-type:none;">
+			<h3>Determiners</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'DET' %}
+	           
+	           <li>{{w[0]}}</li>
+	          {% endif %}
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Nouns</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'NOUN' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Verbs</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'VERB' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Adjectives</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'ADJ' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Adverbs</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'ADV' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Prepositions</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'ADP' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Pronouns</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'PRON' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Conjunctions</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'CONJ' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+       <ul style="list-style-type:none;">
+       	     <h3>Interjection</h3>
+	     {% for w in tagged %}
+	         {% if w[1] == 'X' %}
+	           <li>{{w[0]}}</li>
+	         {% endif %}
+     
+	     {% endfor %}
+       </ul>
+
+{% endblock %}
