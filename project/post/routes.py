@@ -11,7 +11,7 @@ from nltk import WordNetLemmatizer
 from nltk.corpus import wordnet
 
 
-post = Blueprint('post', __name__, template_folder='templates')
+mypost = Blueprint('post', __name__, template_folder='templates')
 
 # Stemming
 
@@ -26,7 +26,7 @@ lemma = WordNetLemmatizer()
 
 # Get All Posts
 
-@post.route('/')
+@mypost.route('/')
 def post():
 	posts = Post.query.all()
 	return render_template("post.html", posts=posts)
@@ -35,7 +35,7 @@ def post():
 
 # Create All Posts
 
-@post.route('/upload', methods=['GET', 'POST'])
+@mypost.route('/upload', methods=['GET', 'POST'])
 def upload():
 	if request.method == 'POST':
 		title = request.form['title']
@@ -47,14 +47,14 @@ def upload():
 		post = Post(title=title, content=content, image=image)
 		db.session.add(post)
 		db.session.commit()
-		return redirect(url_for('home'))
+		return redirect(url_for('post'))
 
 	return render_template("upload.html", title="Post")
 
 
 # Get One Post
 
-@post.route('/post/<int:post_id>')
+@mypost.route('/post/<int:post_id>')
 def get_post(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	return render_template('get_post.html', post=post, title="One Post")
@@ -62,7 +62,7 @@ def get_post(post_id):
 
 # Update One Post
 
-@post.route('/update/<int:post_id>', methods=['GET', 'POST'])
+@mypost.route('/update/<int:post_id>', methods=['GET', 'POST'])
 def update_post(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	if request.method == 'POST':
@@ -72,24 +72,24 @@ def update_post(post_id):
 		post.image = secure_filename(upload.filename)
 		upload.save(f"project/static/images/{secure_filename(upload.filename)}")
 		db.session.commit()
-		return redirect(url_for("home"))
+		return redirect(url_for("post"))
 
 	return render_template("update_post.html", post=post, title="Update One Post")
 
 
 # Delete One Post
 
-@post.route('/delete/<int:post_id>')
+@mypost.route('/delete/<int:post_id>')
 def delete_post(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	db.session.delete(post)
 	db.session.commit()
-	return redirect(url_for("home"))
+	return redirect(url_for("post"))
 
 
 # Get a list of words and their parts of speech for one post
 
-@post.route('/post/<int:post_id>/words')
+@mypost.route('/post/<int:post_id>/words')
 def words(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -103,7 +103,7 @@ def words(post_id):
 
 # Get A list of sentences for one post
 
-@post.route('/post/<int:post_id>/sents')
+@mypost.route('/post/<int:post_id>/sents')
 def sents(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	sents = sent_tokenize(post.content)
@@ -112,7 +112,7 @@ def sents(post_id):
 
 # Get a list of verbs and their tenses from one post
 
-@post.route('/post/<int:post_id>/verbs')
+@mypost.route('/post/<int:post_id>/verbs')
 def get_verbs(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -132,7 +132,7 @@ def get_verbs(post_id):
 
 # Get a list of nouns from one post
 
-@post.route('/post/<int:post_id>/nouns')
+@mypost.route('/post/<int:post_id>/nouns')
 def nouns(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -147,7 +147,7 @@ def nouns(post_id):
 # Get a list of adjectives from one post 
 
 
-@post.route('/post/<int:post_id>/adjectives')
+@mypost.route('/post/<int:post_id>/adjectives')
 def adjectives(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -160,7 +160,7 @@ def adjectives(post_id):
 
 # Get a list of adverbs of one post
 
-@post.route('/post/<int:post_id>/adverbs')
+@mypost.route('/post/<int:post_id>/adverbs')
 def adverbs(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -173,7 +173,7 @@ def adverbs(post_id):
 
 # Get a list of determiners from one post 
 
-@post.route('/post/<int:post_id>/determiners')
+@mypost.route('/post/<int:post_id>/determiners')
 def determiners(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)
@@ -187,7 +187,7 @@ def determiners(post_id):
 
 # Get a list of synonyms for each word of one post
 
-@post.route('/post/<int:post_id>/synsets')
+@mypost.route('/post/<int:post_id>/synsets')
 def synsets(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	words = word_tokenize(post.content)

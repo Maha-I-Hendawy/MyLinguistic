@@ -1,4 +1,6 @@
-from app import db
+from project import db
+from project.post.models import Post
+
 
 
 class User(db.Model):
@@ -6,7 +8,7 @@ class User(db.Model):
 	username = db.Column(db.String(100), nullable=False, unique=True)
 	email = db.Column(db.String(100), nullable=False, unique=True)
 	password = db.Column(db.String(100), nullable=False)
-	text = db.relationship('Text', backref='user', lazy=True)
+	#post = db.relationship('Post', backref='user', lazy=True)
 
 
 

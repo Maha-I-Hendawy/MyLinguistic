@@ -1,5 +1,6 @@
 from project import app, db
 from flask import Blueprint, render_template, request, redirect, url_for
+from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from .models import User
 
