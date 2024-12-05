@@ -2,11 +2,11 @@
 
 {% block content %}
 
-	<ul style="list-style-type:none;">
+	<ul class="list-group">
 	  	 <h3>Words</h3>
 	     {% for w in words %}
 	        <div style="padding: 20px;">
-	         <li class="words">{{ w }}</li>
+	         <li class="words" class="list-group-item">{{ w }}</li>
 	           <form>
 		         <input type="checkbox" name="DT">Determiner
 		         <input type="checkbox" name="N">Noun

@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-	<ul style="list-style-type:none;">
+    <h3 style="text-align:center;">A list of each sentence in post</h3>
+	<ul class="list-group">
 		
 	     {% for s in sents %}
 	        
-	           <li>{{ s }}</li>
+	           <li class="list-group-item"><strong>Sentence: </strong>{{ s }}</li>
 	          
 	     {% endfor %}
     </ul>

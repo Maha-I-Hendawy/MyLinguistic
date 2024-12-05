@@ -2,35 +2,35 @@
 
 {% block content %}
 
-	<ul style="list-style-type:none;">
+	<ul class="list-group">
 	  	 <h3>Articles</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'DT' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-       <ul style="list-style-type:none;">
+       <ul class="list-group">
 	  	 <h3>Possessive Pronouns</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PRP$' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-       <ul style="list-style-type:none;">
+       <ul class="list-group">
 	  	 <h3>Predeterminers</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PDT' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Wh-Determiners</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'WDT' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>

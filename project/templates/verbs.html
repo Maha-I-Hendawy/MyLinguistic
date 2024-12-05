@@ -1,89 +1,89 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-	  <ul style="list-style-type:none;">
-	  	 <h3>Infinitive</h3>
+     <ul class="list-group">
+     	<h3>Inf</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VB' %}
-	         <li>{{ w[0] }}</li>
+	             <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul style="list-style-type:none;">
-	  	 <h3>Base Form</h3>
+      </ul>
+     <ul class="list-group">
+     	<h3>Base Form</h3>
 	     {% for w in VBb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
-       </ul>
-       <ul style="list-style-type:none;">
-	  	 <h3>Present Tense</h3>
+      </ul>
+        <ul class="list-group">
+     	<h3>Pres. tense</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VBP' %}
-	         <li>{{ w[0] }}</li>
+	             <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul style="list-style-type:none;">
+      </ul>
+      
+        <ul class="list-group">
 	  	 <h3>Base Form</h3>
 	     {% for w in VBPb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
-	  	 <h3>Present Tense 3rdP S</h3>
+        <ul class="list-group">
+	  	 <h3>Prest.3rdP S.</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VBZ' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Base Form</h3>
 	     {% for w in VBZb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Gerund</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VBG' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Base Form</h3>
 	     {% for w in VBGb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Past Tense</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VBD' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Base Form</h3>
 	     {% for w in VBDb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Past Participle</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VBN' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Base Form</h3>
 	     {% for w in VBNb %}
-	         <li>{{ w }}</li>
+	         <li class="list-group-item">{{ w }}</li>
 	     {% endfor %}
        </ul>
 	          

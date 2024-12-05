@@ -2,27 +2,27 @@
 
 {% block content %}
 
-	<ul style="list-style-type:none;">
+	<ul class="list-group">
 	  	 <h3>Adjectives</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'JJ' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-       <ul style="list-style-type:none;">
+       <ul class="list-group">
 	  	 <h3>Comparatives</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'JJR' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>
-        <ul style="list-style-type:none;">
+        <ul class="list-group">
 	  	 <h3>Superaltives</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'JJS' %}
-	         <li>{{ w[0] }}</li>
+	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
        </ul>

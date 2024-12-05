@@ -19,7 +19,7 @@ def sentences():
 		db.session.commit()
 		return redirect(request.url)
 
-	return render_template("sentences.html", sentences=sentences)
+	return render_template("tree/sentences.html", sentences=sentences)
 
 
 
@@ -31,4 +31,4 @@ def get_sentence(sentence_id):
 		if w == '.' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
-	return render_template("get_sentence.html", words=words, tagged=tagged)
+	return render_template("tree/get_sentence.html", words=words, tagged=tagged)

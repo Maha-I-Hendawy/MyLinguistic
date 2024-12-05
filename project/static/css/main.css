@@ -2,6 +2,11 @@
 
 ul {
 	float: right;
+	margin: 10px;
+}
+
+h3 {
+	font-weight: bold;
 }
 
 

@@ -33,7 +33,7 @@ def register():
 			db.session.commit()
 			return redirect(url_for('login'))
 			
-	return render_template("register.html", title="Registration Page")
+	return render_template("user/register.html", title="Registration Page")
 
 
 
@@ -51,7 +51,7 @@ def login():
 			flash(f"Welcome {user.username}")
 			return redirect(url_for('profile'))
 
-	return render_template("login.html", title="Login Page")
+	return render_template("user/login.html", title="Login Page")
 
 
 

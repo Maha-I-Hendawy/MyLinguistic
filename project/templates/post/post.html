@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<ul style="list-style-type: none;">
+	<ul class="list-group">
 		{% for post in posts %}
-		   <li><a href="{{ url_for('post.get_post', post_id=post.id)}}">
+		   <li class="list-group-item"><a href="{{ url_for('post.get_post', post_id=post.id)}}">
              <h3>{{post.title}}</h3>
              </a>
 		   </li> 

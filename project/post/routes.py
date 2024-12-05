@@ -29,7 +29,7 @@ lemma = WordNetLemmatizer()
 @mypost.route('/')
 def post():
 	posts = Post.query.all()
-	return render_template("post.html", posts=posts)
+	return render_template("post/post.html", posts=posts)
 
 
 
@@ -49,7 +49,7 @@ def upload():
 		db.session.commit()
 		return redirect(url_for('post'))
 
-	return render_template("upload.html", title="Post")
+	return render_template("post/upload.html", title="Post")
 
 
 # Get One Post
@@ -57,7 +57,7 @@ def upload():
 @mypost.route('/post/<int:post_id>')
 def get_post(post_id):
 	post = Post.query.filter_by(id=post_id).first()
-	return render_template('get_post.html', post=post, title="One Post")
+	return render_template('post/get_post.html', post=post, title="One Post")
 
 
 # Update One Post
@@ -74,7 +74,7 @@ def update_post(post_id):
 		db.session.commit()
 		return redirect(url_for("post"))
 
-	return render_template("update_post.html", post=post, title="Update One Post")
+	return render_template("post/update_post.html", post=post, title="Update One Post")
 
 
 # Delete One Post
