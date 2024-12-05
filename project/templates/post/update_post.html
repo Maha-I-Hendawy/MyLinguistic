@@ -2,17 +2,35 @@
 
 {% block content %}
 
-   <form action="" method="post" enctype="multipart/form-data">
-		<label>Title:</label>
-		<input type="text" name="title" value="{{ post.title }}">
-		<br>
-		<label>Content:</label>
-		<textarea name="content">{{ post.content }}</textarea>
-		<br>
-		<label>Image:</label>
-		<input type="file" name="upload">
-		<input type="submit" value="Update">
-		
-	</form>
+   <div class="jumbotron text-center">
+		<h2>Update Post</h2>		
+	</div>
+	<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Title:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="email" name="title" value="{{ post.title }}">
+    </div>
+  </div>
+
+   <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Content:</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="pwd" placeholder="Enter Content" name="textarea">{{ post.content }}</textarea>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Image:</label>
+    <div class="col-sm-10">
+      <input type="file" id="pwd" name="upload" value="{{ post.image }}">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+  </div>
+</form>
 
 {% endblock %}

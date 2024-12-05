@@ -1,7 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-  <div class="text-center">
+  <div class="jumbotron text-center">
     <h1>Index</h1>
     <p>A list of each word in your text, their synonyms and definitions</p>
   </div>
@@ -11,7 +11,7 @@
 	         <li class="list-group-item"><strong>{{ x.name() }}:</strong> {{ x.definition() }}</li>
 	         {% endfor %}
 	     {% endfor %}
-       </ul>
+  </ul>
      
 	          
 {% endblock %}

@@ -31,4 +31,9 @@ def get_sentence(sentence_id):
 		if w == '.' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
+
+	if request.method == 'POST':
+		word = request.form['word']
+		pos = request.form['pos']
+		
 	return render_template("tree/get_sentence.html", words=words, tagged=tagged)
