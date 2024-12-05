@@ -127,7 +127,7 @@ def get_verbs(post_id):
 	VBGb = [lemma.lemmatize(w[0], 'v') for w in tagged if w[1] == 'VBG']
 	VBDb = [lemma.lemmatize(w[0], 'v') for w in tagged if w[1] == 'VBD']
 	VBNb = [lemma.lemmatize(w[0], 'v') for w in tagged if w[1] == 'VBN']
-	return render_template("verbs.html", tagged=tagged, VBb=VBb, VBPb=VBPb, VBZb=VBZb, VBGb=VBGb, VBDb=VBDb, VBNb=VBNb, title="Sentences")
+	return render_template("pos/verbs.html", tagged=tagged, VBb=VBb, VBPb=VBPb, VBZb=VBZb, VBGb=VBGb, VBDb=VBDb, VBNb=VBNb, title="Sentences")
 
 
 # Get a list of nouns from one post
@@ -140,7 +140,7 @@ def nouns(post_id):
 		if w == '.' or w == ';' or w == ':' or w == '?' or w == '!' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
-	return render_template("nouns.html", tagged=tagged, title="Nouns")
+	return render_template("pos/nouns.html", tagged=tagged, title="Nouns")
 
 
 
@@ -155,7 +155,7 @@ def adjectives(post_id):
 		if w == '.' or w == ';' or w == ':' or w == '?' or w == '!' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
-	return render_template("adjectives.html", tagged=tagged, title="Adjectives")
+	return render_template("pos/adjectives.html", tagged=tagged, title="Adjectives")
 
 
 # Get a list of adverbs of one post
@@ -168,7 +168,7 @@ def adverbs(post_id):
 		if w == '.' or w == ';' or w == ':' or w == '?' or w == '!' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
-	return render_template("adverbs.html", tagged=tagged, title="Adverbs")
+	return render_template("pos/adverbs.html", tagged=tagged, title="Adverbs")
 
 
 # Get a list of determiners from one post 
@@ -181,7 +181,7 @@ def determiners(post_id):
 		if w == '.' or w == ';' or w == ':' or w == '?' or w == '!' or w == ',':
 			words.remove(w)
 	tagged = pos_tag(words)
-	return render_template("determiners.html", tagged=tagged, title="Determiners")
+	return render_template("pos/determiners.html", tagged=tagged, title="Determiners")
 
 
 

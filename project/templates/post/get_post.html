@@ -1,23 +1,25 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<img src="{{ url_for('static', filename='/images/{{post.image}}')}}">
+   <div class="text-center">
+	<!-- <img src="{{ url_for('static', filename='/images/{{post.image}}')}}"> -->
 	<h1>{{ post.title }}</h1>
-	<a href="{{ url_for('post.update_post', post_id=post.id)}}" class="btn">Update</a>
-	<a href="{{ url_for('post.delete_post', post_id=post.id)}}" class="btn">Delete</a>
+	<a href="{{ url_for('post.update_post', post_id=post.id)}}" class="btn btn-success">Update</a>
+	<a href="{{ url_for('post.delete_post', post_id=post.id)}}" class="btn btn-danger">Delete</a>
+   </div>
 	<br>
-	<p>{{ post.content }}</p>
+	<p class="content">{{ post.content }}</p>
 	<br>
-	
-	<a href="{{ url_for('post.sents', post_id=post.id) }}" class="btn">Sentences</a>
-	<a href="{{ url_for('post.words', post_id=post.id)}}" class="btn">Words</a>
-    <a href="{{ url_for('post.determiners', post_id=post.id) }}" class="btn">Determiners</a>
-	<a href="{{ url_for('post.nouns', post_id=post.id) }}" class="btn">Nouns</a>
-	<a href="{{ url_for('post.get_verbs', post_id=post.id) }}" class="btn">Verbs</a>
-	<a href="{{ url_for('post.adjectives', post_id=post.id) }}" class="btn">Adjectives</a>
-    <a href="{{ url_for('post.adverbs', post_id=post.id) }}" class="btn">Adverbs</a>
-	<a href="{{ url_for('post.synsets', post_id=post.id) }}" class="btn">Synonyms and Definitions</a>
-
+	<div class="text-center">
+	<a href="{{ url_for('post.sents', post_id=post.id) }}" class="btn btn-primary">Sentences</a>
+	<a href="{{ url_for('post.words', post_id=post.id)}}" class="btn btn-primary">Words</a>
+    <a href="{{ url_for('post.determiners', post_id=post.id) }}" class="btn btn-primary">Determiners</a>
+	<a href="{{ url_for('post.nouns', post_id=post.id) }}" class="btn btn-primary">Nouns</a>
+	<a href="{{ url_for('post.get_verbs', post_id=post.id) }}" class="btn btn-primary">Verbs</a>
+	<a href="{{ url_for('post.adjectives', post_id=post.id) }}" class="btn btn-primary">Adjectives</a>
+    <a href="{{ url_for('post.adverbs', post_id=post.id) }}" class="btn btn-primary">Adverbs</a>
+	<a href="{{ url_for('post.synsets', post_id=post.id) }}" class="btn btn-primary">Synonyms and Definitions</a>
+    </div>
    
    
 

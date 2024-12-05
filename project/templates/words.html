@@ -1,9 +1,10 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
+       <ul>
+       	<li class="inline">
 		<ul class="list-group">
-			<h3>Determiners</h3>
+			<h3>Deters</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'DET' %}
 	           
@@ -11,6 +12,8 @@
 	          {% endif %}
 	     {% endfor %}
        </ul>
+       </li>
+       <li class="inline">
        <ul class="list-group">
        	     <h3>Nouns</h3>
 	     {% for w in tagged %}
@@ -20,6 +23,8 @@
      
 	     {% endfor %}
        </ul>
+       </li>
+       <li class="inline">
        <ul class="list-group">
        	     <h3>Verbs</h3>
 	     {% for w in tagged %}
@@ -29,8 +34,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Adjectives</h3>
+       	     <h3>Adjs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADJ' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -38,8 +45,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Adverbs</h3>
+       	     <h3>Advs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADV' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -47,8 +56,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Prepositions</h3>
+       	     <h3>Preps</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADP' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -56,8 +67,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Pronouns</h3>
+       	     <h3>Prons</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PRON' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -65,8 +78,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Conjunctions</h3>
+       	     <h3>Conjuncts</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'CONJ' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -74,8 +89,10 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+      <li class="inline">
        <ul class="list-group">
-       	     <h3>Interjection</h3>
+       	     <h3>Interjects</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'X' %}
 	           <li class="list-group-item">{{w[0]}}</li>
@@ -83,5 +100,7 @@
      
 	     {% endfor %}
        </ul>
+      </li>
+   </ul>
 
 {% endblock %}

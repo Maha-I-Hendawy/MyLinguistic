@@ -28,14 +28,14 @@
     <ul class="nav navbar-nav">
     	{% if 'user' in session %}
     	   <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
-        <li><a href="{{ url_for('user.profile') }}">profile</a></li>
+        <li><a href="{{ url_for('user.profile') }}">{{ user.username }}</a></li>
     	   <li><a href="{{ url_for('word') }}">Words</a></li>
     	   <li><a href="{{ url_for('sentence') }}">Sentences</a></li>
     	
     	{% else %}
     	   <li class="active"><a href="{{ url_for('site.home') }}">Home</a></li>
     	   <li><a href="{{ url_for('site.about') }}">About</a></li>
-    	   <li><a href="{{ url_for('site.contact') }}">contact us</a></li>
+    	   <li><a href="{{ url_for('site.contact') }}">Contact Us</a></li>
          <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
          <li><a href="{{ url_for('user.login') }}">Login</a></li>
 

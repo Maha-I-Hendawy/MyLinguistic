@@ -2,6 +2,7 @@
 
 {% block content %}
 
+    <h2>Posts:</h2>
 	<ul class="list-group">
 		{% for post in posts %}
 		   <li class="list-group-item"><a href="{{ url_for('post.get_post', post_id=post.id)}}">
@@ -10,6 +11,6 @@
 		   </li> 
 		{% endfor %}
 	</ul>
-	<a href="{{ url_for('post.upload') }}" class="btn">Post</a>
+	<a href="{{ url_for('post.upload') }}" class="btn btn-primary">Post</a>
 
 {% endblock %}

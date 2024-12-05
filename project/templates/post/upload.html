@@ -1,16 +1,38 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<form action="" method="post" enctype="multipart/form-data">
-		<label>Title:</label>
-		<input type="text" name="title">
-		<br>
-		<label>Content:</label>
-		<textarea name="content"></textarea>
-		<br>
-		<label>Image:</label>
-		<input type="file" name="upload">
-		<input type="submit" value="upload">
+	<div class="jumbotron text-center">
+		<h2>Unleash Your Thoughts</h2>
+		<p>Write Your Passion, Post Your Articles</p>
+		
+	</div>
+	<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="email">Title:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="email" placeholder="Enter Title" name="title">
+    </div>
+  </div>
+
+   <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Content:</label>
+    <div class="col-sm-10">
+      <textarea class="form-control" id="pwd" placeholder="Enter Content" name="textarea"></textarea>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="control-label col-sm-2" for="pwd">Image:</label>
+    <div class="col-sm-10">
+      <input type="file" id="pwd" name="upload">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Post</button>
+    </div>
+  </div>
+</form>
 		
 
 {% endblock %}

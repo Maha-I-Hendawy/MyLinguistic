@@ -1,12 +1,14 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-    <h1 style="text-align: center;">Index</h1>
-    <p style="text-align:center;">A list of each word in your text, their synonyms and definitions</p>
-	<ul>
+  <div class="text-center">
+    <h1>Index</h1>
+    <p>A list of each word in your text, their synonyms and definitions</p>
+  </div>
+	<ul class="list-group">
 	     {% for w in synsets %}
 	         {% for x in w %}
-	         <li style="padding: 10px; margin: 10px;">{{ x.name() }}: {{ x.definition() }}</li>
+	         <li class="list-group-item"><strong>{{ x.name() }}:</strong> {{ x.definition() }}</li>
 	         {% endfor %}
 	     {% endfor %}
        </ul>

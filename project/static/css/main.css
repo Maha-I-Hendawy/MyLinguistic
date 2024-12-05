@@ -1,28 +1,42 @@
 
 
-ul {
+
+/* ul {
 	float: right;
 	margin: 10px;
 }
 
-h3 {
-	font-weight: bold;
-}
+*/
 
 
-.btn {
 
+.inline {
+    
+    list-style-type: none;
+	float: right;
 	padding: 10px;
-	margin: 10px;
-	border: 2px solid blue;
-	border-radius: 3px;
-	background-color: blue;
-	color: white;
-	text-decoration: none;
+	margin: 3px;
 }
+
+
 
 .words {
 	display: inline;
 	padding: 20px;
 	margin: 20px;
+}
+
+.content {
+
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid black;
+	border-radius: 7px;
+}
+
+
+.buttons {
+
+	padding: 10px;
+	margin: 10px;
 }
