@@ -22,8 +22,9 @@
 		
 	<ul class="list-group">
 		{% for x in sentences %}
-		  <li class="list-group-item">{{ x.sentence }}</li>
-		  <a href="{{ url_for('tree.get_sentence', sentence_id=x.id) }}" class="btn btn-primary">Words</a>
+		  <li class="list-group-item">{{ x.sentence }} <a href="{{ url_for('tree.get_sentence', sentence_id=x.id) }}" class="btn btn-success">Words</a></li>
+
+		 
 		{% endfor %}
 	</ul>
 

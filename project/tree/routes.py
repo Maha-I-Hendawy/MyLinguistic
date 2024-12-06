@@ -23,7 +23,7 @@ def sentences():
 
 
 
-@tree.route('/sentence/<int:sentence_id>')
+@tree.route('/sentence/<int:sentence_id>', methods=['GET', 'POST'])
 def get_sentence(sentence_id):
 	sentence = Sentence.query.filter_by(id=sentence_id).first()
 	words = word_tokenize(sentence.sentence)
@@ -35,5 +35,9 @@ def get_sentence(sentence_id):
 	if request.method == 'POST':
 		word = request.form['word']
 		pos = request.form['pos']
+		print(word, pos)
 		
 	return render_template("tree/get_sentence.html", words=words, tagged=tagged)
+
+
+
