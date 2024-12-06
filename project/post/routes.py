@@ -98,7 +98,7 @@ def words(post_id):
 			words.remove(w)
 	tagged = pos_tag(words, tagset='universal')
 	tagged1 = pos_tag(words)
-	return render_template("words.html", tagged=tagged, title="Words")
+	return render_template("tokenize/words.html", tagged=tagged, title="Words")
 
 
 # Get A list of sentences for one post
@@ -107,7 +107,7 @@ def words(post_id):
 def sents(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	sents = sent_tokenize(post.content)
-	return render_template("sents.html", sents=sents, title="Sentences")
+	return render_template("tokenize/sents.html", sents=sents, title="Sentences")
 
 
 # Get a list of verbs and their tenses from one post
@@ -198,6 +198,6 @@ def synsets(post_id):
 	for w in synsets:
 		if w == []:
 			synsets.remove(w)
-	return render_template("synonym.html", synsets=synsets, title="Synonym")
+	return render_template("wordnet/synonym.html", synsets=synsets, title="Synonym")
 
 
