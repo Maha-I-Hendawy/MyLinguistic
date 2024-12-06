@@ -35,7 +35,7 @@ def post():
 
 # Create All Posts
 
-@mypost.route('/upload', methods=['GET', 'POST'])
+@mypost.route('/post', methods=['GET', 'POST'])
 def upload():
 	if request.method == 'POST':
 		title = request.form['title']
@@ -47,7 +47,7 @@ def upload():
 		post = Post(title=title, content=content, image=image)
 		db.session.add(post)
 		db.session.commit()
-		return redirect(url_for('post'))
+		return redirect(url_for('post.post'))
 
 	return render_template("post/upload.html", title="Post")
 
@@ -72,7 +72,7 @@ def update_post(post_id):
 		post.image = secure_filename(upload.filename)
 		upload.save(f"project/static/images/{secure_filename(upload.filename)}")
 		db.session.commit()
-		return redirect(url_for("post"))
+		return redirect(url_for("post.post"))
 
 	return render_template("post/update_post.html", post=post, title="Update One Post")
 
@@ -84,7 +84,7 @@ def delete_post(post_id):
 	post = Post.query.filter_by(id=post_id).first()
 	db.session.delete(post)
 	db.session.commit()
-	return redirect(url_for("post"))
+	return redirect(url_for("post.post"))
 
 
 # Get a list of words and their parts of speech for one post
