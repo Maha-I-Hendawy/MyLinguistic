@@ -1,37 +1,72 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-	<ul class="list-group">
-	  	 <h3>Noun Sing</h3>
+ <div class="jumbotron text-center">
+ 	<h3>A List of Nouns in a post</h3>
+ </div>
+  <div class="row">
+  	<div class="col-sm-3">
+  		<ul class="list-group">
+  			<h3>Noun Sing</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'NN' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-       <ul class="list-group">
-	  	 <h3>Noun Plural</h3>
+  		</ul>
+  	</div>
+  	<div class="col-sm-3">
+  		<ul class="list-group">
+  			 <h3>Noun Plural</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'NNS' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul class="list-group">
-	  	 <h3>Proper Noun Sing</h3>
+  		</ul>
+  	</div>
+  	<div class="col-sm-3">
+  		<ul class="list-group">
+  			<h3>Proper Noun Sing</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'NNP' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul class="list-group">
-	  	 <h3>Proper Noun Plural</h3>
+  		</ul>
+  	</div>
+  	<div class="col-sm-3">
+  		<ul class="list-group">
+  			 <h3>Proper Noun Plural</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'NNPS' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
+  		</ul>
+  	</div>
+  </div>
+  <ul>
+  	<li class="inline">
+	<ul class="list-group">
+	  	 
        </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+	  	
+       </ul>
+   </li>
+   <li class="inline">
+        <ul class="list-group">
+	  	 
+       </ul>
+     </li>
+     <li class="inline">
+        <ul class="list-group">
+	  	
+       </ul>
+     </li>
+    </ul>
         
 {% endblock %}

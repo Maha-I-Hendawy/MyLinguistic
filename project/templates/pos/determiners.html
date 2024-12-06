@@ -1,39 +1,54 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-	<ul class="list-group">
-	  	 <h3>Articles</h3>
+  <div class="jumbotron text-center">
+ 	<h3>A List of Determiners in a post</h3>
+ </div>
+   <div class="row">
+   	<div class="col-sm-3">
+   		<ul class="list-group">
+   			<h3>Articles</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'DT' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-       <ul class="list-group">
-	  	 <h3>Possessive Pronouns</h3>
+   		</ul>
+   		
+   	</div>
+   	<div class="col-sm-3">
+   		<ul class="list-group">
+   			<h3>Possessive Pronouns</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PRP$' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-       <ul class="list-group">
-	  	 <h3>Predeterminers</h3>
+   		</ul>
+   	</div>
+   		<div class="col-sm-3">
+   		<ul class="list-group">
+   			 <h3>Predeterminers</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PDT' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul class="list-group">
-	  	 <h3>Wh-Determiners</h3>
+   		</ul>
+   		
+   	</div>
+   		<div class="col-sm-3">
+   		<ul class="list-group">
+   			 <h3>Wh-Determiners</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'WDT' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        
+   		</ul>
+   		
+   	</div>
+   </div>
+   
 	          
 {% endblock %}

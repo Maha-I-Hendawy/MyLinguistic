@@ -1,31 +1,45 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-
-	<ul class="list-group">
-	  	 <h3>Adverbs</h3>
+ <div class="jumbotron text-center">
+ 	<h3>A List of Adverbs in a post</h3>
+ </div>
+  <div class="row">
+  	<div class="col-sm-4">
+  		<ul class="list-group">
+  			<h3>Adverbs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'RB' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-       <ul class="list-group">
-	  	 <h3>Comparatives</h3>
+  		</ul>
+  		
+  	</div>
+  		<div class="col-sm-4">
+  		<ul class="list-group">
+  			<h3>Comparatives</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'RBR' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
-        <ul class="list-group">
-	  	 <h3>Superaltives</h3>
+  		</ul>
+  		
+  	</div>
+  		<div class="col-sm-4">
+  		<ul class="list-group">
+  			 <h3>Superaltives</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'RBS' %}
 	         <li class="list-group-item">{{ w[0] }}</li>
 	         {% endif %}
 	     {% endfor %}
-       </ul>
+  		</ul>
+  		
+  	</div>
+  </div>
+
         
 
 {% endblock %}

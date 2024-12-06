@@ -1,104 +1,162 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-       <ul>
-       	<li class="inline">
-		<ul class="list-group">
-			<h3>Deters</h3>
+<div class="jumbotron text-center">
+ 	<h3>A List of Words and their parts of speech in a post</h3>
+ </div>
+ <div class="row">
+  <div class="col-sm-2">
+    <ul class="list-group">
+      <h3>Deters</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'DET' %}
 	           
 	           <li class="list-group-item">{{w[0]}}</li>
 	          {% endif %}
 	     {% endfor %}
-       </ul>
-       </li>
-       <li class="inline">
-       <ul class="list-group">
-       	     <h3>Nouns</h3>
+    </ul>
+  </div>
+   <div class="col-sm-2">
+    <ul class="list-group">
+       <h3>Nouns</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'NOUN' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-       </li>
-       <li class="inline">
-       <ul class="list-group">
-       	     <h3>Verbs</h3>
+      
+    </ul>
+  </div>
+   <div class="col-sm-2">
+    <ul class="list-group">
+      <h3>Verbs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'VERB' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Adjs</h3>
+      
+    </ul>
+  </div>
+   <div class="col-sm-2">
+    <ul class="list-group">
+       <h3>Adjs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADJ' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Advs</h3>
+      
+    </ul>
+  </div>
+   <div class="col-sm-2">
+    <ul class="list-group">
+       <h3>Advs</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADV' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Preps</h3>
+    </ul>
+  </div>
+   <div class="col-sm-2">
+    <ul class="list-group">
+       <h3>Preps</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'ADP' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Prons</h3>
+    </ul>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-2">
+    <ul class="list-group">
+    	 <h3>Prons</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'PRON' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Conjuncts</h3>
+     
+    </ul>
+  </div>
+  <div class="col-sm-2">
+    <ul class="list-group">
+    	 <h3>Conjuncts</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'CONJ' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
-       </ul>
-      </li>
-      <li class="inline">
-       <ul class="list-group">
-       	     <h3>Interjects</h3>
+      
+    </ul>
+  </div>
+  <div class="col-sm-2">
+    <ul class="list-group">
+       <h3>Interjects</h3>
 	     {% for w in tagged %}
 	         {% if w[1] == 'X' %}
 	           <li class="list-group-item">{{w[0]}}</li>
 	         {% endif %}
      
 	     {% endfor %}
+    </ul>
+  </div>
+</div>
+
+            
+       <ul>
+       	<li class="inline">
+		
+       </li>
+       <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+       </li>
+       <li class="inline">
+       <ul class="list-group">
+       	     
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	    
+       </ul>
+      </li>
+      <li class="inline">
+       <ul class="list-group">
+       	     
        </ul>
       </li>
    </ul>

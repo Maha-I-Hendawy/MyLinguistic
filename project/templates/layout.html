@@ -26,23 +26,19 @@
       <a class="navbar-brand" href="{{ url_for('site.home') }}">iLinguist</a>
     </div>
     <ul class="nav navbar-nav">
-    	{% if 'user' in session %}
-    	   <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
-        <li><a href="{{ url_for('user.profile') }}">{{ user.username }}</a></li>
-    	   <li><a href="{{ url_for('word') }}">Words</a></li>
-    	   <li><a href="{{ url_for('sentence') }}">Sentences</a></li>
-    	
-    	{% else %}
-    	   <li class="active"><a href="{{ url_for('site.home') }}">Home</a></li>
+    
+    	   <li><a href="{{ url_for('site.home') }}">Home</a></li>
     	   <li><a href="{{ url_for('site.about') }}">About</a></li>
     	   <li><a href="{{ url_for('site.contact') }}">Contact Us</a></li>
-         <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
-         <li><a href="{{ url_for('user.login') }}">Login</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+	         <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
+	         <li><a href="{{ url_for('user.login') }}">Login</a></li>
+     </ul>
 
-    	{%  endif %}
      
       
-    </ul>
+    
   </div>
 </nav>
   {% with messages=get_flashed_messages() %}
@@ -57,6 +53,11 @@
 		{% block content %}
 	    {%  endblock %}	
 	</div>
-
+  <div class="row">
+  <div class="col-sm-12">
+    <p class="text-center">&copy 2024 iLinguist</p>
+  </div>
+  
+</div>
 </body>
 </html>
