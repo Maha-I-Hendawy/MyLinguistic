@@ -1,5 +1,5 @@
 from project import app, db
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 from .models import User
@@ -16,10 +16,10 @@ user = Blueprint('user', __name__, template_folder="templates")
 def register():
 	users = User.query.all()
 	if request.method == 'POST':
-		username = request.form.get("username")
-		email = request.form.get("email")
-		password = request.form.get("password")
-		confirm_password = request.form.get("confirm_password")
+		username = request.form["username"]
+		email = request.form["email"]
+		password = request.form["password"]
+		confirm_password = request.form["confirm_password"]
 		for user in users:
 			if user.username == username:
 				flash("Username already exists")
@@ -31,7 +31,7 @@ def register():
 			user = User(username=username, email=email, password=hashed_password)
 			db.session.add(user)
 			db.session.commit()
-			return redirect(url_for('login'))
+			return redirect(url_for('user.login'))
 			
 	return render_template("user/register.html", title="Registration Page")
 
@@ -47,9 +47,9 @@ def login():
 		user = User.query.filter_by(username=username).first()
 
 		if user and check_password_hash(user.password, password):
-			session["user"] = user.user_id
+			session["user"] = user.username
 			flash(f"Welcome {user.username}")
-			return redirect(url_for('profile'))
+			return redirect(url_for('user.profile'))
 
 	return render_template("user/login.html", title="Login Page")
 
@@ -59,9 +59,9 @@ def login():
 def logout():
 	if 'user' in session:
 		session.pop('user', None)
-		return redirect(url_for('login'))
+		return redirect(url_for('user.login'))
 	else:
-		return redirect(url_for('login'))
+		return redirect(url_for('user.login'))
 
 
 
@@ -71,6 +71,6 @@ def profile():
 	if 'user' in session:
 		user_id = session['user']
 		user = User.query.filter_by(user_id=user_id).first()
-		return render_template("profile.html", user=user)
+		return render_template("user/profile.html", user=user)
 	else:
-		return redirect(url_for('login'))
+		return redirect(url_for('user.login'))

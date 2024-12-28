@@ -30,7 +30,7 @@ lemma = WordNetLemmatizer()
 def post():
 	posts = Post.query.all()
 	return render_template("post/post.html", posts=posts)
-
+	
 
 
 # Create All Posts

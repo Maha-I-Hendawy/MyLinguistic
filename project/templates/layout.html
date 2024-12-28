@@ -20,27 +20,43 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="{{ url_for('site.home') }}">iLinguist</a>
-    </div>
-    <ul class="nav navbar-nav">
-    
-    	   <li><a href="{{ url_for('site.home') }}">Home</a></li>
-    	   <li><a href="{{ url_for('site.about') }}">About</a></li>
-    	   <li><a href="{{ url_for('site.contact') }}">Contact Us</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-	         <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
-	         <li><a href="{{ url_for('user.login') }}">Login</a></li>
-     </ul>
+   {% if 'user' in session %}
+       <nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
+				      <a class="navbar-brand" href="{{ url_for('site.home') }}">iLinguist</a>
+				    </div>
+				    <ul class="nav navbar-nav">
+				    
+				    	   <li><a href="{{ url_for('site.home') }}">Home</a></li>
+				    	   
+				    </ul>
+				    <ul class="nav navbar-nav navbar-right">
+					         <li><a href="{{ url_for('user.profile') }}">{{ session['user'] }}</a></li>
+					         <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
+				     </ul>
+				  </div>
+				</nav>
+      {% else %}
+          <nav class="navbar navbar-default">
+						  <div class="container-fluid">
+						    <div class="navbar-header">
+						      <a class="navbar-brand" href="{{ url_for('site.home') }}">iLinguist</a>
+						    </div>
+						    <ul class="nav navbar-nav">
+						    
+						    	   <li><a href="{{ url_for('site.home') }}">Home</a></li>
+						    	   <li><a href="{{ url_for('site.about') }}">About</a></li>
+						    	   <li><a href="{{ url_for('site.contact') }}">Contact Us</a></li>
+						    </ul>
+						    <ul class="nav navbar-nav navbar-right">
+							         <li><a href="{{ url_for('user.register') }}">Sign Up</a></li>
+							         <li><a href="{{ url_for('user.login') }}">Login</a></li>
+						     </ul>
+						  </div>
+						</nav>
+	    {%  endif %}	
 
-     
-      
-    
-  </div>
-</nav>
   {% with messages=get_flashed_messages() %}
      {% if messages %}
         {% for message in messages %}

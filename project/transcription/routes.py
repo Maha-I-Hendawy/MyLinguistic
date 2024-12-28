@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, url_for, request, redirect
+"""from flask import Blueprint, render_template, url_for, request, redirect
 import speech_recognition as sr
 
 
@@ -25,3 +25,5 @@ def transcribe():
 			transcript = recognizer.recognize_google(data, key=None)
 		
 	return render_template('transcribe.html', transcript=transcript)
+
+"""

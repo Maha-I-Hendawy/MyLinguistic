@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, flash, url_for
 
 
 
@@ -20,4 +20,9 @@ def about():
 
 @site.route('/contact')
 def contact():
+	if request.method == 'POST':
+		first_name = request.form['firstname']
+		last_name = request.form['lastname']
+		email = request.form['email']
+		message = request.form['message']
 	return render_template("site/contact.html")
