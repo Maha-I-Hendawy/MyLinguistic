@@ -70,7 +70,7 @@ def logout():
 def profile():
 	if 'user' in session:
 		user_id = session['user']
-		user = User.query.filter_by(user_id=user_id).first()
-		return render_template("user/profile.html", user=user)
+		userr = User.query.filter_by(user_id=user_id).first()
+		return render_template("user/profile.html", userr=userr)
 	else:
 		return redirect(url_for('user.login'))
