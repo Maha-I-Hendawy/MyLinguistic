@@ -57,10 +57,12 @@ This application is implemented with:
 
 ### Installing dependencies
        - Setting up the development environment:
+        ` ```
             mkdir project
             cd project
             virtualenv venv
             pip install requirements.txt
+           ```
        
   ### Running the project
        - To the run the project:
