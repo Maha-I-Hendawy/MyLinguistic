@@ -33,6 +33,8 @@ This application is implemented with:
 - Bootstrap
 
 ## Challenges
+- Challenge:
+- Challenge: 
 
 ## Future implementations 
    - Creating trees
@@ -72,12 +74,16 @@ This application is implemented with:
 ## Using the project
    - Project structure
      
-     The project is based on the MVT structure using Flask Blueprint
+     The project is based on the MVT structure using Flask Blueprint:
+     
      - Models: database models
      - Routes: the paths to each function
      - Templates: the views of html pages
        
-   - Project design 
+   - Project design
+     
+     - Database Design
+     - System Design
 
 ## References
    - Flask:
