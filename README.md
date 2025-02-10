@@ -74,6 +74,8 @@ This application is implemented with:
    - Project design principles
 
 ## References
+   - Flask:
+   - NLTK: 
 
 
 
