@@ -62,6 +62,7 @@ This application is implemented with:
             mkdir project
             cd project
             virtualenv venv
+            source venv/bin/activate
             pip install requirements.txt
        
   ### Running the project
