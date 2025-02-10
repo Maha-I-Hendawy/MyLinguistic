@@ -71,7 +71,13 @@ This application is implemented with:
 
 ## Using the project
    - Project structure
-   - Project design principles
+     
+     The project is based on the MVT structure using Flask Blueprint
+     - Models: database models
+     - Routes: the paths to each function
+     - Templates: the views of html pages
+       
+   - Project design 
 
 ## References
    - Flask:
