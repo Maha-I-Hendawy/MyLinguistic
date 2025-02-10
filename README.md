@@ -35,7 +35,12 @@ This application is implemented with:
 ## Challenges
 
 ## Future implementations 
-
+   - Creating trees
+   - Extracting noun phrases
+   - Extracting verb phrases
+   - Extracting prepostional phrases
+   - Summarizing Posts
+   - Translating posts into different languages
 
 ## Linguistic App Features
 
