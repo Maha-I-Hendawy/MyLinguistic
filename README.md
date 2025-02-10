@@ -55,15 +55,14 @@ This application is implemented with:
      
 ## Getting Started
 
-    ### Installing dependencies
-
-     - Setting up the development environment:
-       - mkdir project
-       - cd project
-       - virtualenv venv
-       - pip install requirements.txt
+### Installing dependencies
+       - Setting up the development environment:
+          - mkdir project
+          - cd project
+          - virtualenv venv
+          - pip install requirements.txt
        
-   ### Running the project
+  ### Running the project
      - To the run the project:
        - python3 run.py
 
