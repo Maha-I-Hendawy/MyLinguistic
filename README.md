@@ -1,12 +1,12 @@
-# __ __Linguistics App
+# Linguistics App
 
 ## Table of contents:
 1. Overview
-   1.1. What linguistics app does
-   1.2. Back-end Technologies
-   1.3. Front-end Technologies
-   1.4. Challenges
-   1.4. Future implementations
+   - What linguistics app does
+   - Back-end Technologies
+   - Front-end Technologies
+   - Challenges
+   - Future implementations
    
 2. Linguistic App Features
 3. Getting Started
