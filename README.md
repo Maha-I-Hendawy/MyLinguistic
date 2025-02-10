@@ -10,12 +10,12 @@
    
 2. Linguistic App Features
 3. Getting Started
-   3.1. Installing dependencies
-   3.2. Running the project
+   - Installing dependencies
+   - Running the project
 
 4. Using the project
-   4.1. Project structure
-   4.2. Project design principles
+   - Project structure
+   - Project design principles
 
 4. References
 
@@ -76,8 +76,8 @@ This application is implemented with:
    3.2. Running the project
 
 6. Using the project
-   4.1. Project structure
-   4.2. Project design principles
+   - Project structure
+   - Project design principles
 
 4. References
 
