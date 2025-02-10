@@ -20,7 +20,7 @@
 4. References
 
 
-1. Overview
+ ## Overview
 The linguistics app is a simple crud application with a log-in system that uses linguistics to analyze posts
 
 1.1. What the Linguistics app does
