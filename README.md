@@ -3,7 +3,7 @@
  ## Overview
 The linguistics app is a simple crud application with a log-in system that uses linguistics to analyze posts
 
-### What the Linguistics app does
+## What the Linguistics app does
 
 - Create an account.
 - Log in.
@@ -19,25 +19,25 @@ The linguistics app is a simple crud application with a log-in system that uses 
   
 This application is implemented with:
 
-### Back-end Technologies:
+## Back-end Technologies:
 
 - Python
 - Flask
 - Flask-sqlalchemy
 - NLTK
 
-### Front-end Technologies:
+## Front-end Technologies:
 
 - HTML
 - CSS
 - Bootstrap
 
-### Challenges
+## Challenges
 
-### Future implementations 
+## Future implementations 
 
 
-2. Linguistic App Features
+## Linguistic App Features
 
    - User Authentication and Authorization
    - Posts Management
@@ -48,18 +48,19 @@ This application is implemented with:
    - Speech-to-text conversion and analysis
   
      
-4. Getting Started
-   3.1. Installing dependencies
+## Getting Started
+
+    ### Installing dependencies
 
      - Setting up developement environment:
        - 
-   3.2. Running the project
+   ### Running the project
 
-6. Using the project
+## Using the project
    - Project structure
    - Project design principles
 
-4. References
+## References
 
 
 
