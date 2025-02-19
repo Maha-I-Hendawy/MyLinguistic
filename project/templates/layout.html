@@ -47,6 +47,8 @@
 						    
 						    	   <li><a href="{{ url_for('site.home') }}">Home</a></li>
 						    	   <li><a href="{{ url_for('site.about') }}">About</a></li>
+						    	    <li><a href="{{url_for('site.products')}}">Products</a></li>
+                                    <li><a href="{{url_for('site.services')}}">Services</a></li>
 						    	   <li><a href="{{ url_for('site.contact') }}">Contact Us</a></li>
 						    </ul>
 						    <ul class="nav navbar-nav navbar-right">
@@ -57,10 +59,10 @@
 						</nav>
 	    {%  endif %}	
 
-  {% with messages=get_flashed_messages() %}
+  {% with messages=get_flashed_messages(with_categories=true) %}
      {% if messages %}
-        {% for message in messages %}
-            <span>{{ message }}</span>
+        {% for category, message in messages %}
+            <span class="alert alert-{{ category }} text-center">{{ message }}</span>
 	      {%  endfor %}	
 	   {%  endif %}	
 	{%  endwith %}	

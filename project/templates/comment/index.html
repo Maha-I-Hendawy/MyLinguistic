@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<div class="container">
+		{% include '_todoinput.html' %}
+   <ul>
+   	{% for todo in todos %}
+       <a href="{{url_for('one_todo', todo_id=todo.id)}}"><li>{{ todo.title }}</li></a>
+    {% endfor %}
+   </ul>
+    
+	</div>
+   
+{%  endblock %}

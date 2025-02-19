@@ -1,0 +1,84 @@
+users:
+
+= can view users;
+= can view a user;
+= can add a user;
+= can update a user;
+= can delete a user;
+
+
+posts:
+
+= can view posts;
+= can view a post;
+= can add a post;
+= can update a user;
+= can delete a user;
+
+
+comments:
+
+= can view comments;
+= can view a comment;
+= can add a comment;
+= can update a comment;
+= can delete a comment;
+
+
+
+
+
+tree:
+
+= can view trees;
+= can view a tree;
+= can add a tree;
+= can update a tree;
+= can delete a tree;
+
+
+
+
+
+posts
+
+
+
+
+
+
+GET /api/users/{user_id}/posts/{post_id}/verbs
+
+GET /api/users/{user_id}/posts/{post_id}/verbs/vbp
+
+GET /api/users/{user_id}/posts/{post_id}/verbs/vbz
+
+GET /api/users/{user_id}/posts/{post_id}/verbs/vbg
+
+GET /api/users/{user_id}/posts/{post_id}/verbs/vbd
+
+GET /api/users/{user_id}/posts/{post_id}/verbs/vbn
+
+
+
+
+
+
+
+
+tree
+
+GET /api/sentences
+
+POST /api/users/{user_id}/sentences
+
+GET /api/users/{user_id}/sentences/{sentence_id}
+
+GET /api/users/{user_id}/sentences/{sentence_id}/tree
+
+PUT /api/users/{user_id}/sentences/{sentence_id}/update
+
+DELETE /api/users/{user_id}/sentences/{sentence_id}/delete
+
+
+
