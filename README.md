@@ -31,10 +31,12 @@ This application is implemented with:
 - HTML
 - CSS
 - Bootstrap
-
+  
+<!--
 ## Challenges
 - Challenge:
 - Challenge: 
+-->
 
 ## Future implementations 
    - Creating trees
@@ -86,8 +88,17 @@ This application is implemented with:
      - System Design
 
 ## References
-   - Flask:
-   - NLTK: 
+   - [Flask]()
+   - [NLTK]()
+
+
+## Available Documentation
+   - [Linguistics App API Documentation](https://www.blogger.com/blog/post/edit/6933722610381903803/4513626125776345299)
+   - [Linguistics App Database Design Document](https://www.blogger.com/blog/post/edit/6933722610381903803/7766098924068104216)
+   - [Linguistics App Reference Document](https://www.blogger.com/blog/post/edit/6933722610381903803/6676601319571901313)
+   - [Linguistics App Software Technical Specification](https://www.blogger.com/blog/post/edit/6933722610381903803/7826894442824302296)
+   - [Linguistics App Software Requirements Document](https://www.blogger.com/blog/post/edit/6933722610381903803/7589342446796930516)
+   - [Linguistics App Use Cases Document](https://www.blogger.com/blog/post/edit/6933722610381903803/8738594681852789995)
 
 
 
