@@ -61,7 +61,7 @@ This application is implemented with:
 
 ### Installing dependencies
 
-#### Setting up the development environment:
+     Setting up the development environment:
 
             mkdir project
             cd project
@@ -70,7 +70,7 @@ This application is implemented with:
             pip install requirements.txt
        
   ### Running the project
-  #### To the run the project:
+      To the run the project:
            python3 run.py
 
 ## Using the project
@@ -93,12 +93,12 @@ This application is implemented with:
 
 
 ## Available Documentation
-   - [Linguistics App API Documentation](https://www.blogger.com/blog/post/edit/6933722610381903803/4513626125776345299)
-   - [Linguistics App Database Design Document](https://www.blogger.com/blog/post/edit/6933722610381903803/7766098924068104216)
-   - [Linguistics App Reference Document](https://www.blogger.com/blog/post/edit/6933722610381903803/6676601319571901313)
-   - [Linguistics App Software Technical Specification](https://www.blogger.com/blog/post/edit/6933722610381903803/7826894442824302296)
-   - [Linguistics App Software Requirements Document](https://www.blogger.com/blog/post/edit/6933722610381903803/7589342446796930516)
-   - [Linguistics App Use Cases Document](https://www.blogger.com/blog/post/edit/6933722610381903803/8738594681852789995)
+   - [Linguistics App API Documentation](https://miansh.blogspot.com/2025/02/linguistics-app-api-documentation.html?q=Linguistics)
+   - [Linguistics App Database Design Document](https://miansh.blogspot.com/2025/02/linguistics-app-database-design.html?q=Linguistics)
+   - [Linguistics App Reference Document](https://miansh.blogspot.com/2025/02/linguistics-app-reference-document.html?q=Linguistics)
+   - [Linguistics App Software Technical Specification](https://miansh.blogspot.com/2025/02/linguistics-app-software-technical.html?q=Linguistics)
+   - [Linguistics App Software Requirements Document](https://miansh.blogspot.com/2025/02/linguistics-app-software-requirements.html?q=Linguistics)
+   - [Linguistics App Use Cases Document](https://miansh.blogspot.com/2025/02/linguistics-app-use-cases-document.html?q=Linguistics)
 
 
 
