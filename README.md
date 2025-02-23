@@ -16,17 +16,19 @@ The linguistics app is a simple crud application with a log-in system that uses 
 - Words definitions
 - Words synonyms.
 
-  
+
+## Technologies Used
+
 This application is implemented with:
 
-## Back-end Technologies:
+### Back-end Technologies:
 
 - Python
 - Flask
 - Flask-sqlalchemy
 - NLTK
 
-## Front-end Technologies:
+### Front-end Technologies:
 
 - HTML
 - CSS
